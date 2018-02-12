@@ -1,0 +1,58 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Tournament-API
+
+host: localhost:10010
+
+basePath: /
+
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /:
+    x-swagger-router-controller: health
+    get:
+      description: Returns API status
+      operationId: getApiStatus
+      responses:
+        "200":
+          $ref: "#/responses/ServiceStatusResponse"
+        default:
+          $ref: "#/responses/ErrorResponse"
+  /swagger:
+    x-swagger-pipe: swagger_raw
+    
+responses:
+  ServiceStatusResponse:
+    description: 'Service status'
+    schema: 
+      $ref: '#/definitions/ServiceStatus'
+  ErrorResponse:
+    description: 'Error'
+    schema:
+      $ref: '#/definitions/Error'
+
+definitions:
+  ServiceStatus:
+    required:
+      - status
+    properties:
+      status:
+        type: string
+  Error:
+    required:
+      - message
+    properties:
+      code:
+        type: number
+      message:
+        type: string
+        
+      
+

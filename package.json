@@ -1,0 +1,33 @@
+{
+  "name": "tournament-api",
+  "version": "0.0.1",
+  "private": true,
+  "description": "New Swagger API Project",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.12.3",
+    "swagger-express-mw": "^0.1.0"
+  },
+  "devDependencies": {
+    "should": "^7.1.0",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3",
+    "supertest": "^1.0.0"
+  },
+  "scripts": {
+    "edit-yaml": "swagger project edit",
+    "delint": "standard --fix | snazzy",
+    "lint": "standard --verbose | snazzy",
+    "start": "node app.js",
+    "test": "yarn lint && swagger project test"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  }
+}
