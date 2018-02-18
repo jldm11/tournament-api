@@ -5,7 +5,7 @@ info:
 
 host: localhost:10010
 
-basePath: /
+basePath: /v1
 
 schemes:
   - http
