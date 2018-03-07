@@ -22,7 +22,7 @@
     "edit-yaml": "swagger project edit",
     "delint": "standard --fix | snazzy",
     "lint": "standard --verbose | snazzy",
-    "start": "node app.js",
+    "start": "swagger project start",
     "test": "yarn lint && swagger project test"
   },
   "standard": {
