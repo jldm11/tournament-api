@@ -1,14 +1,13 @@
 'use strict'
 
-var SwaggerExpress = require('swagger-express-mw')
-var app = require('express')()
-module.exports = app // for testing
+const SwaggerExpress = require('swagger-express-mw')
+const app = require('express')()
 
-var config = {
+var swaggerConfig = {
   appRoot: __dirname // required config
 }
 
-SwaggerExpress.create(config, function (err, swaggerExpress) {
+SwaggerExpress.create(swaggerConfig, function (err, swaggerExpress) {
   if (err) { throw err }
 
   swaggerExpress.register(app)
@@ -16,3 +15,5 @@ SwaggerExpress.create(config, function (err, swaggerExpress) {
   var port = process.env.PORT || 10010
   app.listen(port)
 })
+
+module.exports = app // for testing
