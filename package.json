@@ -23,7 +23,7 @@
     "delint": "standard --fix | snazzy",
     "lint": "standard --verbose | snazzy",
     "start": "swagger project start",
-    "test": "yarn lint && swagger project test"
+    "test": "yarn lint && NODE_ENV=TEST swagger project test"
   },
   "standard": {
     "globals": [

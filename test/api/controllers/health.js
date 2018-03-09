@@ -7,7 +7,7 @@ describe('controllers', function () {
     describe('GET /', function () {
       it('should return Tournament-API service status', function (done) {
         request(server)
-          .get('/')
+          .get('/v1')
           .set('Accept', 'application/json')
           .expect('Content-Type', /json/)
           .expect(200)
