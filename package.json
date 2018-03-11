@@ -8,6 +8,7 @@
   "license": "",
   "main": "app.js",
   "dependencies": {
+    "config": "^1.30.0",
     "express": "^4.12.3",
     "swagger-express-mw": "^0.1.0"
   },
@@ -21,8 +22,8 @@
     "edit-yaml": "swagger project edit",
     "delint": "standard --fix | snazzy",
     "lint": "standard --verbose | snazzy",
-    "start": "node app.js",
-    "test": "yarn lint && swagger project test"
+    "start": "swagger project start",
+    "test": "yarn lint && NODE_ENV=TEST swagger project test"
   },
   "standard": {
     "globals": [
