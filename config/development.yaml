@@ -1,1 +1,6 @@
 env: development
+db:
+  mongo:
+    host: localhost
+    name: tournament-local
+    port: 27017
