@@ -1,0 +1,8 @@
+env: test
+db:
+  mongo:
+    name: tournament-test
+    host: example.com
+    port: 41924
+    user: test-user
+    password: test-user

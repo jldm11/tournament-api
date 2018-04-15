@@ -1,5 +1,3 @@
-# swagger configuration file
-
 # values in the swagger hash are system configuration for swagger-node
 swagger:
 

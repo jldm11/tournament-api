@@ -8,10 +8,15 @@
   "license": "",
   "main": "app.js",
   "dependencies": {
+    "config": "^1.30.0",
     "express": "^4.12.3",
+    "lodash": "^4.17.5",
+    "mongoose": "^5.0.10",
+    "swagger": "^0.7.5",
     "swagger-express-mw": "^0.1.0"
   },
   "devDependencies": {
+    "mockgoose": "^7.3.5",
     "should": "^7.1.0",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3",
@@ -21,11 +26,12 @@
     "edit-yaml": "swagger project edit",
     "delint": "standard --fix | snazzy",
     "lint": "standard --verbose | snazzy",
-    "start": "node app.js",
-    "test": "yarn lint && swagger project test"
+    "start": "swagger project start",
+    "test": "yarn lint && NODE_ENV=test PORT=10011 swagger project test"
   },
   "standard": {
     "globals": [
+      "before",
       "describe",
       "it"
     ]
