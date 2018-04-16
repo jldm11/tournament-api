@@ -10,4 +10,4 @@ module.exports = {
   getApiStatus
 }
 
-// test CI
+//error test build when merge to dev
